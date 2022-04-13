@@ -102,3 +102,9 @@ source $ZSH/oh-my-zsh.sh
 
 #Golang
 export PATH=$PATH:/usr/local/go/bin
+#tfenv
+export PATH=$HOME/.tfenv/bin:$PATH
+export PATH=/home/dave/.local/bin:$PATH
+
+#oci-cli
+[[ -e "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh"
