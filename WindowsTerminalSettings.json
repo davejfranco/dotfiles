@@ -44,7 +44,8 @@
             },
             "historySize": 12000,
             "scrollbarState": "visible",
-            "useAcrylic": false
+            "useAcrylic": false,
+            "bellStyle": "none"
         },
         "list": 
         [
@@ -70,10 +71,16 @@
                 "colorScheme": "dave1",
                 "guid": "{5a069d55-87bd-57cf-8a07-2726b203d3e5}",
                 "hidden": false,
-                "name": "Ubuntu Linux",
-                //"source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc",
-                //"startingDirectory": "//wsl$/Ubuntu20.04/home/dave/",
+                "name": "Personal",
+                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc",
                 "useAcrylic": false
+            },
+            {
+                "colorScheme": "dave1",
+                "guid": "{5506b8d3-3ff7-59bb-8f07-e6c295ac19f8}",
+                "hidden": false,
+                "name": "ubuntu-tutorial",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
