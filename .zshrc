@@ -108,10 +108,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #Editor
-export EDITOR=/usr/bin/nvim
+export EDITOR=nvim
 
 #GIT
 export GPG_TTY=$TTY
+
 #Golang
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
@@ -120,36 +121,22 @@ export GOBIN=~/go/bin
 
 #tfenv
 export PATH=$HOME/.tfenv/bin:$PATH
-export PATH=/home/dave/.local/bin:$PATH
-#istio
-export PATH=$HOME/.istio/istio-1.20.1/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 #oci-cli
 [[ -e "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh"
-
-#kube-ps1
-source $HOME/.kube-ps1/kube-ps1.sh
-PROMPT='$(kube_ps1)'$PROMPT
-kubeoff
 
 #vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/davej/"
 export PATH="$PATH:/mnt/c/Program\ Files/Oracle/VirtualBox"
 
-#pack - autocompletion
-. $(pack completion --shell zsh)
-
 #alias
-alias vim='/usr/bin/nvim'
+alias vim='nvim'
 #alias python='/usr/bin/python3'
 alias k='/usr/local/bin/kubectl'
 alias tf='terraform'
 alias kar='/usr/local/bin/kubectl-argo-rollouts'
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
