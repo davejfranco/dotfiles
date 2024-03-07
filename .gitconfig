@@ -1,7 +1,7 @@
 [user]
 	name = Dave Franco
 	email = davefranco1987@gmail.com
-  signingkey = /home/dave/.ssh/id_ed25519
+  signingkey = /home/dave/.ssh/id_ed25519.pub
 
 [gpg]
 	format = ssh
