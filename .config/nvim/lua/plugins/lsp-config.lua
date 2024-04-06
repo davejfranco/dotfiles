@@ -15,6 +15,7 @@ return {
         ensure_installed = {
           "terraformls",
           "ansiblels",
+          "tsserver",
           "dockerls",
           "helm_ls",
           "pyright",
@@ -39,7 +40,10 @@ return {
       lspconfig.yamlls.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.tflint.setup({})
+      -- typescript
+      lspconfig.tsserver.setup({})
 
+      -- gopls
       lspconfig.gopls.setup({
         cmd = { "gopls", "serve" },
         filetypes = { "go", "gomod", "gowork", "gotmpl"},
@@ -94,17 +98,5 @@ return {
         end,
       })
     end,
-    --Toggle diagnostics
-    vim.api.nvim_create_user_command("DiagnosticToggle", function()
-      local config = vim.diagnostic.config
-      local vt = config().virtual_text
-      config {
-        virtual_text = not vt,
-        underline = not vt,
-        signs = not vt,
-      }
-    end, { desc = "toggle diagnostic" }),
-    -- keymap to toggle diagnostics
-    vim.api.nvim_set_keymap("n", "<leader>dt", ":DiagnosticToggle<CR>", { noremap = true, silent = true })
   }
 }
