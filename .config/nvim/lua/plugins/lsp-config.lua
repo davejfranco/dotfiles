@@ -1,4 +1,3 @@
--- To get helm on lsp :h vim.lsp.buf
 return {
   {
     -- LSP installation 
@@ -26,6 +25,10 @@ return {
         }
       })
     end
+  },
+  {
+    -- Helm syntax highlighting
+    "towolf/vim-helm"
   },
   {
     -- This allows to config and use the lsp
