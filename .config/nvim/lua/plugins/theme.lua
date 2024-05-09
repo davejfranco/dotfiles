@@ -1,3 +1,12 @@
+return {
+  "navarasu/onedark.nvim",
+  lazy = false,
+  config = function()
+     style = "darker"
+    vim.cmd "colorscheme onedark"
+  end
+}
+-- catppuccino theme
 --[[return {
   "catppuccin/nvim",
   lazy = false,
@@ -10,11 +19,12 @@
   config = function()
     vim.cmd.colorscheme "catppuccin-mocha"
   end
-}--]]
-return {
+}]]--
+-- Kanawa theme
+--[[return {
 	"rebelot/kanagawa.nvim",
 	lazy = false,
 	config = function()
 		vim.cmd.colorscheme("kanagawa-wave")
 	end,
-}
+}]]--
