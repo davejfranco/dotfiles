@@ -1,10 +1,11 @@
+-- Github
 return {
-  "navarasu/onedark.nvim",
-  lazy = false,
-  config = function()
-     style = "darker"
-    vim.cmd "colorscheme onedark"
-  end
+	"projekt0n/github-nvim-theme",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd("colorscheme github_dark_dimmed")
+	end,
 }
 -- catppuccino theme
 --[[return {
@@ -17,9 +18,9 @@ return {
     cmp = true,
   },
   config = function()
-    vim.cmd.colorscheme "catppuccin-mocha"
-  end
-}]]--
+    vim.cmd.colorscheme("catppuccin-mocha")
+  end,
+}--]]
 -- Kanawa theme
 --[[return {
 	"rebelot/kanagawa.nvim",
@@ -27,4 +28,5 @@ return {
 	config = function()
 		vim.cmd.colorscheme("kanagawa-wave")
 	end,
-}]]--
+}]]
+--

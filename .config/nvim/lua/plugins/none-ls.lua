@@ -16,7 +16,7 @@ return {
 				null_ls.builtins.formatting.goimports_reviser,
 			},
 			-- This is the configuration of the autofomatting
-			--[[on_attach = function(client, bufnr)
+			on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
           vim.api.nvim_clear_autocmds({
             group = augroup,
@@ -31,7 +31,6 @@ return {
           })
         end
       end,
-      --]]
 		})
 
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
