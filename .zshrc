@@ -119,6 +119,8 @@ export PATH=$PATH:~/go/bin
 export GOPRIVATE="github.com/davejfranco/*"
 export GOBIN=~/go/bin
 
+if [ $(uname) = "Linux" ]; then
+
 #tfenv
 export PATH=$HOME/.tfenv/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -130,6 +132,8 @@ export PATH=$HOME/.local/bin:$PATH
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/davej/"
 export PATH="$PATH:/mnt/c/Program\ Files/Oracle/VirtualBox"
+
+fi
 
 #alias
 alias vim='nvim'
