@@ -1,0 +1,10 @@
+[user]
+	name = Dave Franco
+	email = self@daveops.sh
+  signingkey = /home/dave/.ssh/sign-key.pub
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
