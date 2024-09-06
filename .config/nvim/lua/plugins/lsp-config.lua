@@ -15,6 +15,7 @@ return {
           "tailwindcss",
           "terraformls",
           "ansiblels",
+          --"jinja-lsp",
           "tsserver",
           "dockerls",
           "helm_ls",
@@ -38,13 +39,15 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.ansiblels.setup({})
       lspconfig.dockerls.setup({})
       lspconfig.helm_ls.setup({})
       lspconfig.pyright.setup({})
-      lspconfig.yamlls.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.tflint.setup({})
+      -- yaml
+      lspconfig.yamlls.setup({
+        filetypes = { "yaml", "yml" },
+      })
       -- terraform
       lspconfig.terraformls.setup({
         cmd = { "terraform-ls", "serve" },
@@ -63,6 +66,12 @@ return {
         filetypes = { "yaml", "yml" },
         root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
       })
+      -- jinja
+      --[[lspconfig.jinja_lsp.setup({
+        cmd = { "jinja-lsp" },
+        filetypes = { "jinja", "j2" },
+        root_dir = lspconfig.util.root_pattern(".git"),
+      })--]]
       -- gopls
       lspconfig.gopls.setup({
         cmd = { "gopls", "serve" },
@@ -94,6 +103,7 @@ return {
       --
       -- Filetypes
       vim.filetype.add({ extension = { templ = "templ" } })
+      vim.filetype.add({ extension = { jinja = "jinja", j2 = "jinja", jinja2 = "jinja" } })
       -- keymap
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
