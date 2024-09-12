@@ -15,10 +15,11 @@ return {
           "tailwindcss",
           "terraformls",
           "ansiblels",
-          --"jinja-lsp",
+          "jinja_lsp",
           "tsserver",
           "dockerls",
           "helm_ls",
+          "prettier",
           "pyright",
           "tflint",
           "yamlls",
@@ -67,11 +68,11 @@ return {
         root_dir = lspconfig.util.root_pattern("go.mod", ".git"),
       })
       -- jinja
-      --[[lspconfig.jinja_lsp.setup({
+      lspconfig.jinja_lsp.setup({
         cmd = { "jinja-lsp" },
         filetypes = { "jinja", "j2" },
-        root_dir = lspconfig.util.root_pattern(".git"),
-      })--]]
+        root_dir = lspconfig.util.root_pattern(".git", ".j2", ".jinja"),
+      })
       -- gopls
       lspconfig.gopls.setup({
         cmd = { "gopls", "serve" },
@@ -102,8 +103,8 @@ return {
       })]]
       --
       -- Filetypes
-      vim.filetype.add({ extension = { templ = "templ" } })
-      vim.filetype.add({ extension = { jinja = "jinja", j2 = "jinja", jinja2 = "jinja" } })
+      --vim.filetype.add({ extension = { templ = "templ" } })
+      --vim.filetype.add({ extension = { jinja = "jinja", j2 = "jinja", jinja2 = "jinja" } })
       -- keymap
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
