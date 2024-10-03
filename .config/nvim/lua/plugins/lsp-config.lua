@@ -19,7 +19,6 @@ return {
           "tsserver",
           "dockerls",
           "helm_ls",
-          "prettier",
           "pyright",
           "tflint",
           "yamlls",
@@ -93,8 +92,15 @@ return {
       lspconfig.tsserver.setup({})
       -- tailwindcss
       lspconfig.tailwindcss.setup({
-        filetypes = { "*.css", "tailwindcss" },
+        filetypes = { "*.css", "templ" },
         init_options = { userLanguages = { templ = "html" } },
+        root_pattern = { "tailwind.config.js" },
+
+        settings = {
+          includeLanguages = {
+            templ = "html",
+          },
+        },
       })
       --[[
       -- html

@@ -8,7 +8,8 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 -- Disable LSP log
 vim.lsp.set_log_level("off")
-
+-- disable codeium by default
+vim.g.codeim_enabled = false,
 -- Filetypes
 vim.filetype.add({ extension = { templ = "templ" } })
 vim.filetype.add({ extension = { jinja = "jinja", j2 = "jinja", jinja2 = "jinja" } })
