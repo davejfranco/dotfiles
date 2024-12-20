@@ -1,7 +1,7 @@
 [user]
 	name = Dave Franco
 	email = self@daveops.sh
-  signingkey = /home/dave/.ssh/sign-key.pub
+  signingkey = ~/.ssh/sign-key.pub
 
 [gpg]
 	format = ssh

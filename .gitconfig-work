@@ -1,7 +1,7 @@
 [user]
 	name = Dave Franco
-	email = dfr@onomondo.com
-	signingkey = /Users/davefranco/.ssh/id_ed25519.pub
+	email = davefranco1987@gmail.com
+  signingkey = ~/.ssh/sign-key.pub
 
 [commit]
 	gpgsign = true

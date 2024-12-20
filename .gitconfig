@@ -9,7 +9,7 @@
 [commit]
   gpgsign = true
 
-[includeIf "gitdir:~/daveops/"]
+[includeIf "gitdir:~/src/daveops/"]
   path = ~/.dotfiles/.gitconfig-daveops
 [includeIf "gitdir:~/src/personal/"]
   path = ~/.dotfiles/.gitconfig-personal
