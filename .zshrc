@@ -1,4 +1,4 @@
-if [ "$TMUX" = "" ]; then tmux; fi
+#if [ "$TMUX" = "" ]; then tmux; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -112,6 +112,11 @@ export EDITOR=nvim
 
 #GIT
 export GPG_TTY=$TTY
+#PATH
+
+#tfenv
+export PATH=$HOME/.tfenv/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 #Golang
 export PATH=$PATH:/usr/local/go/bin
@@ -119,23 +124,10 @@ export PATH=$PATH:~/go/bin
 export GOPRIVATE="github.com/davejfranco/*"
 export GOBIN=~/go/bin
 
-if [ $(uname) = "Linux" ]; then
-
-#tfenv
-export PATH=$HOME/.tfenv/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-
-#oci-cli
-[[ -e "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/dave/.local/lib/oracle-cli/lib/python3.8/site-packages/oci_cli/bin/oci_autocomplete.sh"
-
-#vagrant
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
-export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/davej/"
-export PATH="$PATH:/mnt/c/Program\ Files/Oracle/VirtualBox"
-
-fi
-
 #alias
+#Tailscale Macos 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+#nvim
 alias vim='nvim'
 #alias python='/usr/bin/python3'
 alias k='/usr/local/bin/kubectl'
@@ -148,3 +140,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Created by `pipx` on 2024-08-12 12:29:59
+export PATH="$PATH:/Users/davefranco/.local/bin"
+
+# Add Cargo 
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
