@@ -41,7 +41,6 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.dockerls.setup({})
       lspconfig.helm_ls.setup({})
-      lspconfig.pyright.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.tflint.setup({})
       -- yaml
@@ -87,6 +86,10 @@ return {
             staticcheck = true,
           },
         },
+      })
+      -- Python
+      lspconfig.pyright.setup({
+        filetypes = { "python" },
       })
       -- typescript
       lspconfig.tsserver.setup({})
