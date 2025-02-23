@@ -3,9 +3,7 @@ return {
   event = 'BufEnter',
   config = function()
     -- Accept Copilot suggestion
-    vim.keymap.set('i', '<C-g>', function()
-      return vim.fn['copilot#Accept'] '\\<CR>'
-    end, { expr = true, silent = true, desc = 'Accept Copilot suggestion' })
+    vim.keymap.set('i', '<C-i>', 'copilot#Accept("<CR>")', { expr = true, silent = true, desc = 'Accept Copilot suggestion' })
 
     -- Cycle suggestions (next)
     vim.keymap.set('i', '<C-l>', '<Plug>(copilot-next)', { silent = true, desc = 'Cycle to next Copilot suggestion' })
