@@ -1,9 +1,9 @@
 # general
-
+title = "DaveOps"
 font-family = JetBrainsMono Nerd Font Mono
-font-size =  30
+font-size =  16
 theme = catppuccin-mocha
-shell-integration-features = sudo,no-cursor,no-title  
+shell-integration-features = sudo,no-cursor  
 window-padding-balance = true
 window-save-state = always
 window-colorspace = display-p3
