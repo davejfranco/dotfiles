@@ -3,7 +3,6 @@
 	email = davefranco1987@gmail.com
   signingkey = ~/.ssh/sign-key.pub
 
-
 [gpg]
 	format = ssh
 

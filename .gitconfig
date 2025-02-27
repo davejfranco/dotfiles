@@ -1,10 +1,10 @@
 [user]
-	name = Dave Franco
-	email = davefranco1987@gmail.com
+  name = Dave Franco
+  email = davefranco1987@gmail.com
   signingkey = ~/.ssh/sign-key.pub
 
 [gpg]
-	format = ssh
+  format = ssh
 
 [commit]
   gpgsign = true
