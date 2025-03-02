@@ -22,7 +22,7 @@ return {
         "helm",
         -- Ansible
         "jinja",
-        "ansible-lint",
+        --"ansible-lint",
         "dockerfile",
         "typescript",
       })
