@@ -9,34 +9,34 @@ window-save-state = always
 window-colorspace = display-p3
 
 # keybindings
-keybind = ctrl+s>r=reload_config
-keybind = ctrl+s>x=close_surface
+keybind = cmd+s>r=reload_config
+keybind = cmd+s>x=close_surface
 
-keybind = ctrl+s>n=new_window
+keybind = cmd+s>n=new_window
 
 # tabs 
-keybind = ctrl+s>c=new_tab
+keybind = cmd+s>c=new_tab
 keybind = shift+right=next_tab
 keybind = shift+left=previous_tab
 keybind = shift+comma=move_tab:-1
 keybind = shift+period=move_tab:1
 
 # split
-keybind = ctrl+s>/=new_split:right
-keybind = ctrl+s>'=new_split:down
+keybind = cmd+s>/=new_split:right
+keybind = cmd+s>'=new_split:down
 
 # split navigation
-keybind = ctrl+s>down=goto_split:bottom
-keybind = ctrl+s>up=goto_split:top
-keybind = ctrl+s>left=goto_split:left
-keybind = ctrl+s>right=goto_split:right
+keybind = cmd+s>down=goto_split:bottom
+keybind = cmd+s>up=goto_split:top
+keybind = cmd+s>left=goto_split:left
+keybind = cmd+s>right=goto_split:right
 
 # split resizing
-keybind = ctrl+s>z=toggle_split_zoom
-keybind = ctrl+s>e=equalize_splits
-keybind = ctrl+s>shift+left=resize_split:left,20
-keybind = ctrl+s>shift+right=resize_split:right,20
-keybind = ctrl+s>shift+up=resize_split:up,20
-keybind = ctrl+s>shift+down=resize_split:down,20
+keybind = cmd+s>z=toggle_split_zoom
+keybind = cmd+s>e=equalize_splits
+keybind = cmd+s>shift+left=resize_split:left,20
+keybind = cmd+s>shift+right=resize_split:right,20
+keybind = cmd+s>shift+up=resize_split:up,20
+keybind = cmd+s>shift+down=resize_split:down,20
 
 copy-on-select = clipboard
