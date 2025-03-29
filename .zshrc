@@ -114,6 +114,9 @@ export EDITOR=nvim
 export GPG_TTY=$TTY
 #PATH
 
+#docker 
+export PATH=/Applications/Docker.app/Contents/Resources/bin:$PATH 
+
 #tfenv
 export PATH=$HOME/.tfenv/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -153,4 +156,11 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Asdf 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+if [[ ! -d "${ASDF_DATA_DIR:-$HOME/.asdf}/completions" ]]; then
+  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
+fi
+asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
 
