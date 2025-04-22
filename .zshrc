@@ -1,3 +1,4 @@
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 #if [ "$TMUX" = "" ]; then tmux; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -85,6 +86,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+# brew 
+export PATH="/opt/homebrew/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -130,9 +134,10 @@ export GOBIN=~/go/bin
 #alias
 #Tailscale Macos 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 #nvim
 alias vim='nvim'
-#alias python='/usr/bin/python3'
+alias python='/usr/bin/python3'
 alias k='/usr/local/bin/kubectl'
 alias tf='terraform'
 alias kar='/usr/local/bin/kubectl-argo-rollouts'
@@ -150,17 +155,50 @@ export PATH="$PATH:/Users/davefranco/.local/bin"
 # Add Cargo 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# tenv 
+tenv completion zsh > ~/.tenv.completion.zsh
+echo "source \$HOME/.tenv.completion.zsh" >> ~/.zshrc
+
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # Asdf 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-if [[ ! -d "${ASDF_DATA_DIR:-$HOME/.asdf}/completions" ]]; then
-  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
-fi
-asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
+#export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+#if [[ ! -d "${ASDF_DATA_DIR:-$HOME/.asdf}/completions" ]]; then
+#  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
+#fi
+#asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
 
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
+source $HOME/.tenv.completion.zsh
