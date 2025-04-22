@@ -4,7 +4,7 @@ font-family = JetBrainsMono Nerd Font Mono
 font-feature = -calt, -liga, -dlig
 font-size =  16
 
-theme = catppuccin-mocha
+theme = tokyonight_night
 shell-integration-features = sudo,no-cursor  
 window-padding-balance = true
 window-save-state = always
