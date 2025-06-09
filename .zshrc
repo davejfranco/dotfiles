@@ -157,48 +157,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # tenv 
 tenv completion zsh > ~/.tenv.completion.zsh
-echo "source \$HOME/.tenv.completion.zsh" >> ~/.zshrc
 
-# Pyenv
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init --path)"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-
-# Asdf 
-#export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-#if [[ ! -d "${ASDF_DATA_DIR:-$HOME/.asdf}/completions" ]]; then
-#  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
-#fi
-#asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
-
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
-source $HOME/.tenv.completion.zsh
+# Load Secrets 
+source ~/.secrets 
