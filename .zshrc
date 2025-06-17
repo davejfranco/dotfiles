@@ -121,10 +121,6 @@ export GPG_TTY=$TTY
 #docker 
 export PATH=/Applications/Docker.app/Contents/Resources/bin:$PATH 
 
-#tfenv
-export PATH=$HOME/.tfenv/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-
 #Golang
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
@@ -139,7 +135,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias vim='nvim'
 alias python='/usr/bin/python3'
 alias k='/usr/local/bin/kubectl'
-alias tf='terraform'
+alias tf='/opt/homebrew/bin/terraform'
 alias kar='/usr/local/bin/kubectl-argo-rollouts'
 
 export NVM_DIR="$HOME/.nvm"
@@ -155,8 +151,5 @@ export PATH="$PATH:/Users/davefranco/.local/bin"
 # Add Cargo 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# tenv 
-tenv completion zsh > ~/.tenv.completion.zsh
-
 # Load Secrets 
-source ~/.secrets 
+source ~/.secrets
