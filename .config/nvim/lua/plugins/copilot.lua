@@ -9,7 +9,7 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     keys = {
-      { "<leader>am", "<cmd>CopilotChatModels<cr>", desc = "Chat Model to use"},
-    }
-  }
+      { "<leader>am", "<cmd>CopilotChatModels<cr>", desc = "Chat Model to use" },
+    },
+  },
 }
