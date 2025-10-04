@@ -1,5 +1,5 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   event = "LazyFile",
   cmd = "Mason",
   keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
@@ -8,6 +8,7 @@ return {
   opts = {
     ensure_installed = {
       "templ",
+      "copilot-language-server",
     },
   },
 }
