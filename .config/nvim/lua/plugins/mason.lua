@@ -8,7 +8,6 @@ return {
   opts = {
     ensure_installed = {
       "templ",
-      "copilot-language-server",
     },
   },
 }
