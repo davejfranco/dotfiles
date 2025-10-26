@@ -153,3 +153,13 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Load Secrets 
 source ~/.secrets
+
+# Krew 
+#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# opencode
+export PATH=/Users/davefranco/.opencode/bin:$PATH
+
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+if command -v rbenv >/dev/null; then eval "$(rbenv init - zsh)"; fi
