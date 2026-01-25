@@ -1,10 +1,14 @@
 # general
-title = "DaveOps"
-font-family = JetBrainsMono Nerd Font Mono
-font-feature = -calt, -liga, -dlig
-font-size =  16
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
-theme = tokyonight_night
+title = "DaveOps"
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+font-size = 9
+
+#theme = tokyonight_night
 shell-integration-features = sudo,no-cursor  
 window-padding-balance = true
 window-save-state = always
