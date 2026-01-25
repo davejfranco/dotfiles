@@ -1,0 +1,11 @@
+[user]
+	name = Dave Franco
+	email = dfr@onomondo.com
+  signingkey = ~/.ssh/sign-key.pub
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	format = ssh
+

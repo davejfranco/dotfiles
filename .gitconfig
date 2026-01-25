@@ -9,9 +9,11 @@
 [commit]
   gpgsign = true
 
-[includeIf "gitdir:~/src/daveops/"]
+[includeIf "gitdir:~/Code/DaveOps/"]
   path = ~/.dotfiles/.gitconfig-daveops
-[includeIf "gitdir:~/src/personal/"]
+[includeIf "gitdir:~/Code/Personal/"]
   path = ~/.dotfiles/.gitconfig-personal
-[includeIf "gitdir:~/src/work/"]
-  path = ~/.dotfiles/.gitconfig-work
+[includeIf "gitdir:~/Code/Work/Onomondo"]
+  path = ~/.dotfiles/.gitconfig-onomondo
+[includeIf "gitdir:~/Code/Work/Quaderno"]
+  path = ~/.dotfiles/.gitconfig-quaderno
