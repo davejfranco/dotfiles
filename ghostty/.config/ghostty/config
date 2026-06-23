@@ -7,8 +7,12 @@ title = "DaveOps"
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular
 font-size = 9
+# Remove ligatures (I hate this shit)
+font-feature = -liga
+font-feature = -calt
+font-feature = -dlig
 
-#theme = tokyonight_night
+# theme = tokyonight_night
 shell-integration-features = sudo,no-cursor  
 window-padding-balance = true
 window-save-state = always
@@ -42,7 +46,9 @@ keybind = cmd+s>z=toggle_split_zoom
 keybind = cmd+s>e=equalize_splits
 keybind = cmd+s>shift+left=resize_split:left,20
 keybind = cmd+s>shift+right=resize_split:right,20
-keybind = cmd+s>shift+up=resize_split:up,20
-keybind = cmd+s>shift+down=resize_split:down,20
+
 
 copy-on-select = clipboard
+
+# Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
+async-backend = epoll

@@ -1,6 +1,4 @@
-# if [ "$TMUX" = "" ]; then tmux; fi
 [[ $- != *i* ]] && return
-
 # Detect OS
 case "$(uname -s)" in
   Darwin*) #macOS
@@ -58,24 +56,26 @@ case "$(uname -s)" in
   if command -v rbenv >/dev/null; then eval "$(rbenv init - zsh)"; fi
   ;;
   Linux*) # Linux
-  # Load omarchy-zsh configuration
-  if [[ -d /usr/share/omarchy-zsh/conf.d ]]; then
-    for config in /usr/share/omarchy-zsh/conf.d/*.zsh; do
-      [[ -f "$config" ]] && source "$config"
-    done
-  fi
+  
+  # Ruby 
+  export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
-  # Load omarchy-zsh functions and aliases
-  if [[ -d /usr/share/omarchy-zsh/functions ]]; then
-    for func in /usr/share/omarchy-zsh/functions/*.zsh; do
-      [[ -f "$func" ]] && source "$func"
-    done
-  fi
+  # Omarchy (only if installed)
+  [[ -f /usr/share/omarchy-zsh/shell/zoptions ]] && source /usr/share/omarchy-zsh/shell/zoptions
+ 
+  # Initialize completion before fzf keybindings (fzf-completion uses .complete-word)
+  autoload -Uz compinit compaudit
+  mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}"
+  _zcompdump="${XDG_CACHE_HOME:-$HOME/.cache}/zcompdump-${ZSH_VERSION}"
+  compinit -d "$_zcompdump" 2>/dev/null || compinit -i -d "$_zcompdump"
+  unset _zcompdump
 
-  # Initialize zsh completion (required for ssh host completion)
-  autoload -Uz compinit
-  compinit
+  [[ -f /usr/share/omarchy-zsh/shell/all ]] && source /usr/share/omarchy-zsh/shell/all
 
+  # Prefer Omarchy's fzf completion on Tab if available
+  #if (( $+widgets[fzf-completion] )); then
+  #  bindkey '^I' fzf-completion
+  #fi
   ;;
 esac
 
@@ -97,5 +97,3 @@ alias k='/usr/local/bin/kubectl'
 
 # opencode (already added in macOS section for Darwin)
 [[ "$(uname -s)" != "Darwin" ]] && export PATH="$HOME/.opencode/bin:$PATH"
-
-. "$HOME/.local/share/../bin/env"
