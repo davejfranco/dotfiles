@@ -51,9 +51,6 @@ case "$(uname -s)" in
   # kubectl-argo-rollouts
   alias kar='/usr/local/bin/kubectl-argo-rollouts'
 
-  # Ruby
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  if command -v rbenv >/dev/null; then eval "$(rbenv init - zsh)"; fi
   ;;
   Linux*) # Linux
 
@@ -96,6 +93,12 @@ export PATH=$PATH:~/go/bin
 export GOPRIVATE="github.com/davejfranco/*"
 export GOBIN=~/go/bin
 
+# Ruby environments are optional on every host.
+export PATH="$HOME/.rbenv/bin:$PATH"
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init - zsh)"
+fi
+
 #nvim
 alias vim='nvim'
 alias python='/usr/bin/python3'
@@ -103,3 +106,9 @@ alias k='/usr/local/bin/kubectl'
 
 # opencode (already added in macOS section for Darwin)
 [[ "$(uname -s)" != "Darwin" ]] && export PATH="$HOME/.opencode/bin:$PATH"
+
+# Omarchy initializes Starship itself. Other hosts, including rbox VMs, use
+# the stowed configuration when Starship is installed.
+if (( $+commands[starship] )) && [[ -z "${STARSHIP_SHELL:-}" ]]; then
+  eval "$(starship init zsh)"
+fi
