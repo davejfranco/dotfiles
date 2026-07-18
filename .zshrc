@@ -57,19 +57,9 @@ case "$(uname -s)" in
   if command -v rbenv >/dev/null; then eval "$(rbenv init - zsh)"; fi
   ;;
   Linux*) # Linux
-  # Load omarchy-zsh configuration
-  if [[ -d /usr/share/omarchy-zsh/conf.d ]]; then
-    for config in /usr/share/omarchy-zsh/conf.d/*.zsh; do
-      [[ -f "$config" ]] && source "$config"
-    done
-  fi
-
-  # Load omarchy-zsh functions and aliases
-  if [[ -d /usr/share/omarchy-zsh/functions ]]; then
-    for func in /usr/share/omarchy-zsh/functions/*.zsh; do
-      [[ -f "$func" ]] && source "$func"
-    done
-  fi
+  # Omarchy (only if installed)
+  [[ -f /usr/share/omarchy-zsh/shell/zoptions ]] && source /usr/share/omarchy-zsh/shell/zoptions
+  [[ -f /usr/share/omarchy-zsh/shell/all ]] && source /usr/share/omarchy-zsh/shell/all
 
   ;;
 esac
@@ -92,3 +82,6 @@ alias k='/usr/local/bin/kubectl'
 
 # opencode (already added in macOS section for Darwin)
 [[ "$(uname -s)" != "Darwin" ]] && export PATH="$HOME/.opencode/bin:$PATH"
+
+# Load SSH
+source ~/dotfiles/scripts/loadssh.sh

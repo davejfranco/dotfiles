@@ -56,8 +56,11 @@ case "$(uname -s)" in
   if command -v rbenv >/dev/null; then eval "$(rbenv init - zsh)"; fi
   ;;
   Linux*) # Linux
-  
-  # Ruby 
+
+  # SSH agent (systemd user service; macOS has its own launchd agent)
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+  # Ruby
   export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
   # Omarchy (only if installed)
