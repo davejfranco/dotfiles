@@ -57,8 +57,11 @@ case "$(uname -s)" in
   ;;
   Linux*) # Linux
 
-  # SSH agent (systemd user service; macOS has its own launchd agent)
-  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+  # Prefer the local systemd agent when present, but retain a forwarded agent
+  # socket on remote hosts where this local socket does not exist.
+  if [[ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+  fi
 
   # Ruby
   export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
