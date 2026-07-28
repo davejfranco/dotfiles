@@ -84,4 +84,4 @@ alias k='/usr/local/bin/kubectl'
 [[ "$(uname -s)" != "Darwin" ]] && export PATH="$HOME/.opencode/bin:$PATH"
 
 # Load SSH
-source ~/dotfiles/scripts/loadssh.sh
+source ~/.dotfiles/scripts/loadssh.sh
