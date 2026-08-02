@@ -1,0 +1,11 @@
+auth.json
+sessions/
+cache/
+run-history.jsonl
+models-store.json
+npm/node_modules/
+npm/package-lock.json
+git/
+*.bak
+*.bak.*
+settings.json.lazypi.*.bak

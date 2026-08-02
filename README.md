@@ -7,6 +7,8 @@ This repo contains the different configs of the tools I use on a daily basis
 - tmux
 - ghostty 
 - zsh
+- opencode
+- pi
 - stow (this allows me to create symbolic links of the different config files)
 
 ### How to use
@@ -20,7 +22,7 @@ cd ~/.dotfiles
 Stow the packages you want to deploy. For example:
 
 ```bash
-stow zsh nvim tmux starship
+stow zsh nvim tmux starship opencode agents pi
 ```
 
 Desktop packages can be deployed separately when needed:
